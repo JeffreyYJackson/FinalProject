@@ -7,19 +7,25 @@ using Entities.Concrete;
 
 namespace DataAccess.Concrete.InMemory
 {
-    public class InMemoryProductDal:IProductDal
-    { 
+    public class InMemoryProductDal : IProductDal
+    {
         List<Product> _products;
 
         public InMemoryProductDal()
         {
             _products = new List<Product>()
             {
-                new Product{ProductId = 1, CategoryId = 1, ProductName = "Glass", UnitPrice = 15, UnitsInStock = 15},
-                new Product{ProductId = 2, CategoryId = 1, ProductName = "Camera", UnitPrice = 500, UnitsInStock = 3},
-                new Product{ProductId = 3, CategoryId = 2, ProductName = "SmartPhone", UnitPrice = 1500, UnitsInStock = 2},
-                new Product{ProductId = 4, CategoryId = 2, ProductName = "Keyboard", UnitPrice = 150, UnitsInStock = 65},
-                new Product{ProductId = 5, CategoryId = 2, ProductName = "Mouse", UnitPrice = 15, UnitsInStock = 15},
+                new Product {ProductId = 1, CategoryId = 1, ProductName = "Glass", UnitPrice = 15, UnitsInStock = 15},
+                new Product {ProductId = 2, CategoryId = 1, ProductName = "Camera", UnitPrice = 500, UnitsInStock = 3},
+                new Product
+                {
+                    ProductId = 3, CategoryId = 2, ProductName = "SmartPhone", UnitPrice = 1500, UnitsInStock = 2
+                },
+                new Product
+                {
+                    ProductId = 4, CategoryId = 2, ProductName = "Keyboard", UnitPrice = 150, UnitsInStock = 65
+                },
+                new Product {ProductId = 5, CategoryId = 2, ProductName = "Mouse", UnitPrice = 15, UnitsInStock = 15},
             };
         }
 
@@ -27,6 +33,11 @@ namespace DataAccess.Concrete.InMemory
         public List<Product> GetAll()
         {
             return _products;
+        }
+
+        Product GetById(int id)
+        {
+            return _products.SingleOrDefault(p => p.ProductId == id);
         }
 
         public List<Product> GetAll(Expression<Func<Product, bool>> filter = null)

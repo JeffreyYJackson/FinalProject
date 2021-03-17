@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "Entities\Entiti
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleUI", "ConsoleUI\ConsoleUI.csproj", "{E21D28F4-C2BC-473A-AAAA-DB3AA1BE6A6D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{E464C474-47B6-43B3-984A-62EA75E7D381}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{E21D28F4-C2BC-473A-AAAA-DB3AA1BE6A6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E21D28F4-C2BC-473A-AAAA-DB3AA1BE6A6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E21D28F4-C2BC-473A-AAAA-DB3AA1BE6A6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E464C474-47B6-43B3-984A-62EA75E7D381}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E464C474-47B6-43B3-984A-62EA75E7D381}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E464C474-47B6-43B3-984A-62EA75E7D381}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E464C474-47B6-43B3-984A-62EA75E7D381}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
